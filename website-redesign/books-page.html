@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta charset="UTF-8">
+    <title>Books</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-image: url("background-jungle-02.jpg");
+        }
+
+
+        header {
+            width: 1180px;
+            height: 95px;
+            background-color: lightcoral;
+            padding-top: 10px;
+            padding-left: 45px;
+            color: white;
+        }
+
+        .wrapper {
+            width: 1180px;
+            height: 910px;
+            background-color: white;
+            margin: 0 auto;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .logo {
+            float: left;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        p#events, p#books, p#animals, p#about {
+            display: inline;
+            font-size: 22px;
+            font-family: 'Montserrat', sans-serif;
+            padding-left: 45px;
+        }
+
+
+        /* Page content */
+        .content {
+            padding: 45px;
+        }
+
+        /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 9999;
+        }
+
+        /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+        .sticky + .content {
+            padding-top: 145px;
+        }
+
+
+        a:link {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:visited {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: yellow;
+        }
+
+        a:active {
+            text-decoration: none;
+            color: lightgreen;
+        }
+
+
+        .bottom-info {
+            font-size: 16px;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+          .book-thumbnails {
+            padding-left:30px;
+            position: relative;
+        }
+
+        .slideshow-container {
+            height: 550px;
+            width: 400px;
+            background-color: #fbdb65;
+            border-radius: 15px;
+        }
+
+
+        /*Slideshow
+            /* Slideshow */
+        * {box-sizing: border-box;}
+        body {font-family: Verdana, sans-serif;}
+        .mySlides {display: none;}
+        img {vertical-align: middle; border-radius: 15px}
+
+        /* Slideshow container */
+        .slideshow-container {
+            width: 400px;
+            height: 550px;
+            background-color: #fbdb65;
+            border-radius: 15px;
+            margin: 12px auto 58px 2px;
+            padding: 40px;
+        }
+
+        /* Caption text */
+        .text {
+            color: darkslategrey;
+            font-size: 20px;
+            padding: 20px 50px;
+            position: relative;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+
+        }
+
+        @-webkit-keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+            .text {font-size: 11px}
+        }
+
+        .title {
+            background-color: #fbdb65;
+            width: 120px;
+            padding: 6px;
+            position: relative;
+            border-radius: 15px;
+            color: darkslategrey;
+            position: relative;
+        }
+        .about {
+            position: absolute;
+            margin-left: 500px;
+            margin-top: -40px;
+            display: block;
+            width: 400px;
+            font-size: 20px;
+        }
+
+        h1 {
+            font-size: 20px;
+            font-family: 'Montserrat', sans-serif;
+            color: lightcoral;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: white;
+            margin-bottom: 10px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .info {
+            positon: relative;
+            margin-left: 406px;
+            margin-top: -486px;
+            text-align: left;
+            display: block;
+            width: 400px;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+
+<div class="wrapper">
+
+    <div id="navbar">
+        <header><a href="index.html"><img class="logo" src="asset-1.png" alt="Wild Rumpus" height="70px"></a>
+            <nav>
+                <a href="events-page.html"><p id="events"> <i class="fa fa-file-text"></i> Events</a>
+                <a href="books-page.html"><p id="books"> <i class="fa fa-book"></i> Books</a>
+                <a href="animals-page.html"><p id="animals"> <i class="fa fa-paw"></i> Animals</a>
+                <a href="about-page.html"><p id="about"> <i class="fa fa-group"></i> About</a>
+            </nav>
+        </header>
+    </div> <!-- End navbar -->
+
+    <div class="content">
+
+        <div>
+            <h1 class="title"> New Titles</h1>
+        </div>
+
+        <div>
+            <h1 class="about"> About</h1>
+        </div>
+
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <img class="book-thumbnails" src="book-blink.png" alt="blink">
+                <div class="text">
+                    <h1>I Miss You When I Blink</h1>
+                    <h2>Mary Laura Philpott</h2>
+                    <p class="info">In this memoir-in-essays full of spot-on observations about home, work, and creative life, Philpott takes on the conflicting pressures of modern adulthood with wit and heart. She offers up her own stories to show that identity crises don’t happen just once or only at midlife; reassures us that small, recurring personal re-inventions are both normal and necessary; and advises that if you’re going to faint, you should get low to the ground first. Most of all, Philpott shows that when you stop feeling satisfied with your life, you don’t have to burn it all down and set off on a transcontinental hike (unless you want to, of course). You can call upon your many selves to figure out who you are, who you’re not, and where you belong. Who among us isn’t trying to do that?
+                    </p></div>
+            </div>
+
+            <div class="mySlides fade">
+                <img class="book-thumbnails" src="book-comeup.jpg" alt="comeup">
+                <div class="text">
+                    <h1>On The Come Up</h1>
+                    <h2>Angie Thomas</h2>
+                    <p class="info">Sixteen-year-old Bri wants to be one of the greatest rappers of all time. Or at
+                        least win her first battle. As the daughter of an underground hip hop legend who died right
+                        before he hit big, Bri’s got massive shoes to fill.
+
+                        But it’s hard to get your come up when you’re labeled a hoodlum at school, and your fridge at
+                        home is empty after your mom loses her job. So Bri pours her anger and frustration into her
+                        first song, which goes viral…for all the wrong reasons.
+
+                        Bri soon finds herself at the center of a controversy, portrayed by the media as more menace
+                        than MC. But with an eviction notice staring her family down, Bri doesn’t just want to make
+                        it—she has to. Even if it means becoming the very thing the public has made her out to be.
+
+                        Insightful, unflinching, and full of heart, On the Come Up is an ode to hip hop from one of the
+                        most influential literary voices of a generation. It is the story of fighting for your dreams,
+                        even as the odds are stacked against you; and about how, especially for young black people,
+                        freedom of speech isn’t always free.
+
+                    </p></div>
+            </div>
+
+            <div class="mySlides fade">
+                <img class="book-thumbnails" src="book-dogman.jpg" alt="dogman">
+                <div class="text">
+                    <h1>Dogman: Brawl of the Wild</h1>
+                    <h2>Dav Pilkey</h2>
+                    <p class="info">Dogman: Part dog, Part man. All magic. Have you ever wished you could "unsee"
+                        something? This compilation of illustrations all have one theme: Dogman. Originally drawn with a
+                        child's chalk on a sidewalk in north Minneapolis during the summer of 2008, Dogman has
+                        intrigued, amused, and confused all who have since laid eyes on him. This book is a collection
+                        of crude drawings of Dogman by Rob Hudson, drawn over a period of seven years. (Editors note:
+                        most of Rob's sketches were drawn during the 6&10pm evening news -"usually during weather," Rob
+                        says). Each of the drawings is accompanied by a famous quote, relating to dogs...or were they
+                        really talking about Dogman? You decide. Whether Dogman is crudely resembling a smattering of
+                        semi-obscure celebrities, some friends of Rob Hudson, or proudly showing off a new litter,
+                        you'll agree these simple drawings are hilarious or just plain disturbing.</p></div>
+            </div>
+
+            <div class="mySlides fade">
+                <img class="book-thumbnails" src="book-lion.jpg" alt="lion">
+                <div class="text">
+                    <h1>Lion Down</h1>
+                    <h2>Stuart Gibbs</h2>
+                    <p class="info">For once, operations at the enormous zoo/theme park appear to be running smoothly
+                        (except for the occasional herring-related mishap in the penguin exhibit) and Teddy Fitzroy is
+                        finally able to give detective work a rest. But then a local lion is accused of killing a famous
+                        dog—and the dog’s owner, an inflammatory radio host, goes on a crusade to have the cat declared
+                        a nuisance so it can be hunted. But it looks like the lion might have been framed, and a
+                        renegade animal activist wants Teddy and Summer to help prove it. Soon, Teddy finds himself
+                        wrapped up in the middle of his most bizarre, hilarious, and dangerous case yet.
+                    </p></div>
+            </div>
+
+            <div class="mySlides fade">
+                <img class="book-thumbnails" src="book-merci.jpg" alt="merci">
+                <div class="text">
+                    <h1>Merci Suarez Changes Gears</h1>
+                    <h2>Meg Medina</h2>
+                    <p class="info">Merci Suarez knew that sixth grade would be different, but she had no idea just how
+                        different. For starters, Merci has never been like the other kids at her private school in
+                        Florida, because she and her older brother, Roli, are scholarship students. They don’t have a
+                        big house or a fancy boat, and they have to do extra community service to make up for their free
+                        tuition. So when bossy Edna Santos sets her sights on the new boy who happens to be Merci’s
+                        school-assigned Sunshine Buddy, Merci becomes the target of Edna’s jealousy. Things aren't going
+                        well at home, either: Merci’s grandfather and most trusted ally, Lolo, has been acting strangely
+                        lately — forgetting important things, falling from his bike, and getting angry over nothing. No
+                        one in her family will tell Merci what's going on, so she’s left to her own worries, while also
+                        feeling all on her own at school. In a coming-of-age tale full of humor and wisdom,
+                        award-winning author Meg Medina gets to the heart of the confusion and constant change that
+                        defines middle school — and the steadfast connection that defines family.</p></div>
+            </div>
+
+            <div class="mySlides fade">
+                <img class="book-thumbnails" src="book-song.jpg" alt="song">
+                <div class="text">
+                    <h1>Song for a Whale</h1>
+                    <h2>Lynne Kelly</h2>
+                    <p class="info">From fixing the class computer to repairing old radios, twelve-year-old Iris is a
+                        tech genius. But she's the only deaf person in her school, so people often treat her like she's
+                        not very smart. If you've ever felt like no one was listening to you, then you know how hard
+                        that can be.
+                        <br>
+                        When she learns about Blue 55, a real whale who is unable to speak to other whales, Iris
+                        understands how he must feel. Then she has an idea: she should invent a way to "sing" to him!
+                        But he's three thousand miles away. How will she play her song for him?
+                        <br>
+                        Full of heart and poignancy, this affecting story by sign language interpreter Lynne Kelly shows
+                        how a little determination can make big waves./p></div>
+            </div>
+
+            <div class="mySlides fade">
+                <img class="book-thumbnails" src="book-titanic.jpg" alt="titanic">
+                <div class="text">
+                    <h1>Escape This Book: Titac</h1>
+                    <h2>Bill Doyle</h2>
+                    <p class="info">Reader, beware! Once you open this book, there is no turning back. You will have
+                        three chances to survive the Titanic's fateful voyage. Decide which path to take first.
+
+                        Passenger: Exploring the ship is fun! Just don't get caught on the wrong deck when there's an
+                        iceberg ahead!
+
+                        Crew Member: You work for a family in first class. Can you persuade them to save you along with
+                        their beloved dog?
+
+                        Stowaway: You snuck onto this ship. Can you draw your way onto a lifeboat?
+
+                        In the Escape This Book! series, YOU are the star of history! Doodle your way through adventures
+                        as you decide the best path for survival. Don't be afraid to rip or fold a page. . . . Your
+                        escape may depend on it!</p></div>
+            </div>
+
+        </div>
+
+</div> <!--end.content -->
+
+</div> <!-- end Wrapper -->
+
+<p class="bottom-info">
+    2720 West 43rd Street
+    Minneapolis, MN 55410
+    612.920.5005 (phone)
+    612.920.7804 (fax)<br>
+    info@wildrumpusbooks.com <br> <br>
+    Copyright © Wild Rumpus
+</p>
+
+<script>
+
+    //Top NavBar
+    window.onscroll = function() {myFunction()};
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+
+    //Slideshow//
+    var slideIndex = 0;
+    showSlides();
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 4000); // Change image every 4 seconds
+    }
+
+</script>
+
+</body>
+</html>

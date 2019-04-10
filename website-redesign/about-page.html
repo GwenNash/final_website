@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta charset="UTF-8">
+    <title>About</title>
+
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-image: url("background-jungle-02.jpg");
+        }
+
+
+        header {
+            width: 1180px;
+            height: 95px;
+            background-color: lightcoral;
+            padding-top: 10px;
+            padding-left: 45px;
+            color: white;
+        }
+
+        .wrapper {
+            width: 1180px;
+            height: 1450px;
+            background-color: white;
+            margin: 0 auto;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .logo {
+            float: left;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        p#events, p#books, p#animals, p#about {
+            display: inline;
+            font-size: 22px;
+            font-family: 'Montserrat', sans-serif;
+            padding-left: 45px;
+        }
+
+
+        /* Page content */
+        .content {
+            padding: 50px;
+        }
+
+        /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 9999;
+        }
+
+        /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+        .sticky + .content {
+            padding-top: 145px;
+        }
+
+
+        a:link {
+            text-decoration: none;
+            color: black;
+        }  a:visited {
+            text-decoration: none;
+            color: white;
+        }  a:hover {
+            text-decoration: none;
+            color: yellow;
+        }  a:active {
+            text-decoration: none;
+            color: lightgreen;
+        }
+
+
+        .bottom-info {
+            font-size: 16px;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        p {
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .video {
+            position: relative;
+        }
+
+        .map {
+            position: relative;
+            margin-left: 640px;
+            margin-top: -372px;
+        }
+
+        #history-text {
+            font-size: 20px;
+            font-family: 'Montserrat', sans-serif;
+            color: lightcoral;
+        }
+
+        .rumpus-history {
+            margin-top: 40px;
+            width: 1080px;
+            height: 720px;
+            background-color: #fbdb65;
+            color: darkslategrey;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        #video {
+            background-color: #fbdb65;
+            width: 70px;
+            padding: 6px;
+            font-size: 20px;
+            font-family: 'Montserrat', sans-serif;
+            color: darkslategrey;
+            border-radius: 15px;
+        }
+
+        #directions {
+            background-color: #fbdb65;
+            width: 116px;
+            padding: 6px;
+            font-size: 20px;
+            font-family: 'Montserrat', sans-serif;
+            color: darkslategrey;
+            border-radius: 15px;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="wrapper">
+
+    <div id="navbar">
+        <header><a href="index.html"><img class="logo" src="asset-1.png" alt="Wild Rumpus" height="70px"></a>
+            <nav>
+                <a href="events-page.html"><p id="events"> <i class="fa fa-file-text"></i> Events</a>
+                <a href="books-page.html"><p id="books"> <i class="fa fa-book"></i> Books</a>
+                <a href="animals-page.html"><p id="animals"> <i class="fa fa-paw"></i> Animals</a>
+                <a href="about-page.html"><p id="about"> <i class="fa fa-group"></i> About</a>
+            </nav>
+        </header>
+    </div> <!-- End navbar -->
+
+    <div class="content">
+
+        <div class="video">
+        <h1 id="video">Video</h1> <br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/W8SbbkDBfEY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+<div class="map">
+    <h1 id="directions">Directions</h1> <br>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2824.9382048019756!2d-93.31590418451988!3d44.92459217909835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87f6271753247ebf%3A0x74df467aa566a24b!2sWild+Rumpus!5e0!3m2!1sen!2sus!4v1554848881552!5m2!1sen!2sus" width="400" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+
+
+        <div class="rumpus-history">
+            <h1 id="history-text">Rumpus History: The Book that Built a Bookstore</h1> <br><br>
+            <p>During its twenty-five-year course, Wild Rumpus has had a sort of conversation with the book The
+                Salamander Room by Anne Mazer. In 1992, we first used this story as a kind of blueprint for building the
+                store. And today it continues to teach us about books and young people, and about adults who love them.
+                <br><br>
+                Alone, Brian goes into the woods, discovers a salamander and takes it home to his bedroom. Each page of
+                the story that follows is driven by his off-stage mother's questions. And for each question, Brian has
+                an answer. His answers both accommodate the new salamander and magically transform the world of his
+                bedroom. Each illustration shows a step in a process that changes a conventional interior to an
+                exterior: gradually walls and ceilings disappear, wildlife moves in and then takes Brian and the reader
+                back out. And at the end, the last pages show Brian sound asleep in his bed in the woods . . . "and next
+                to me, on the boulder with its head resting on soft moss, the salamander will sleep."
+                <br><br>
+                Architecture doesn't have the luxury of page-turning, but instead allows us a front-to-back spatial
+                progression. Our store's front doors open into a fairly conventional interior with carpet, a comfortable
+                reading chair and floorlamp. Midway, things begin to change, there's a tree-trimmer sheetrocked in the
+                ceiling on a ladder, and the ceiling itself at this point starts to crack open to the sky. At the back,
+                with birds above and rats beneath a garden shed, the store wants you to feel like you're outside.
+                <br><br>
+                Besides feeding us a design concept, there are other, deeper layers of flavor in this favorite book.
+                It's a story about parenting. Brian's mother, instead of screaming, "Where have you been? How many times
+                have I told you not to wander off into those woods alone? And I just cleaned your room and what's that
+                slimey animal doing in your drawer? Brian!" Not so in this book. This mother asks simple questions, not
+                in an interrogating, punishing way, but more as little gifts that honor and nourish her son's
+                intelligence.
+                <br><br>
+                Woody Allen once confessed that he'd always felt "at two with nature." A recent radio commentator
+                lamented that parents no longer allow their children "to play on the edges of civilization." Instead too
+                many children today are willingly tethered to indoor technology and self-sequestered away from the
+                natural world. This book is all but literally eliminating the distinctions between indoors and outdoors.
+                Remember, the salamander is an amphibian--it lives and breathes by moving back and forth between water
+                and earth. In mythology, the salamander is associated with the fourth element, fire. One explanation is
+                that the amphibian hibernates in logs which, when brought inside to fuel a winter fire resulted in the
+                salamander's sudden appearance among the flames.
+                <br><br>
+                In the beginning, Brian may bring nature--earth, air, fire and water--in the form of a salamander inside
+                to his bedroom, but by the end, the salamander--throughout a silent chorus--has torn off the ceiling,
+                broken down the walls and thus shows us how transient all of our shelters really are. No matter what we
+                construct or how hard we try to wrap and protect ourselves, there's really no way to avoid the truth
+                that we all live together and sleep together in nature's great and only salamander room. -Tom</p>
+        </div>
+
+</div> <!-- end wrapper -->
+</div> <!-- end .content -->
+
+<p class="bottom-info">
+    2720 West 43rd Street
+    Minneapolis, MN 55410
+    612.920.5005 (phone)
+    612.920.7804 (fax)<br>
+    info@wildrumpusbooks.com <br> <br>
+    Copyright © Wild Rumpus
+</p>
+
+<script>
+
+    //Top NavBar
+    window.onscroll = function() {myFunction()};
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+
+</script>
+
+</body>
+</html>

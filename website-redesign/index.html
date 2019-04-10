@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta charset="UTF-8">
+    <title>Homescreen</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-image: url("background-jungle-02.jpg");
+        }
+
+        /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+        .sticky {
+            z-index: 9999;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+        .sticky + .content {
+            padding-top: 145px;
+        }
+
+        header {
+            width: 1180px;
+            height: 95px;
+            background-color: lightcoral;
+            padding-top: 10px;
+            padding-left: 45px;
+            color: white;
+        }
+
+        .wrapper {
+            width: 1180px;
+            height: 1350px;
+            background-color: white;
+            margin: 0 auto;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .logo {
+            float: left;
+        }
+
+        /* Page content */
+        .content {
+            padding: 50px;
+        }
+
+        h1 {
+            font-size: 22px;
+            font-family: 'Montserrat:b', sans-serif;
+            color: lightcoral;
+        }
+
+        h2 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
+            color: lightcoral;
+
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        p#events, p#books, p#animals, p#about {
+            display: inline;
+            font-size: 22px;
+            font-family: 'Montserrat', sans-serif;
+            padding-left: 45px;
+        }
+
+
+        a:link {
+            text-decoration: none;
+            color: black;
+        }  a:visited {
+            text-decoration: none;
+            color: white;
+        }  a:hover {
+            text-decoration: none;
+            color: #fbdb65;
+        }  a:active {
+            text-decoration: none;
+            color: lightgreen;
+        }
+
+
+        .inner-container {
+            width: 1180px;
+            height: 450px;
+            padding-left: 5px;
+        }
+
+        .content-box {
+            width: 350px;
+            height: 350px;
+            margin: 20px;
+            float: left;
+            background-color: #fbdb65;
+            display: inline-block;
+            border-radius: 15px;
+        }
+
+        #box1, #box2, #box3 {
+            font-size: 22px;
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            color: darkslategrey;
+            padding: 30px 50px;
+        }
+
+        #birdy {
+            margin: 45px 0 0 136px;
+        }
+
+        #boxcat {
+            margin: 0 auto;
+            padding-top: 22px;
+        }
+
+        .bottom-info {
+            font-size: 16px;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .topnav input[type=text] {
+                border: 1px solid #ccc;
+        }
+
+        .text-box {
+            font-size: 16px;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            text-align: left;
+            margin-bottom: 40px;
+            padding-left: 25px;
+            padding-right:20px;
+            line-height: 28px;
+        }
+
+        /*
+
+/* Style the form element with a border around it */
+        form {
+            width: 508px;
+            border: 4px solid white;
+            border-radius: 15px;
+            margin-left: 632px;
+            margin-top: 50px;
+            position: absolute;
+        }
+
+        /* Add some padding and a grey background color to containers */
+        .container {
+            width: 500px;
+            padding: 14px;
+            background-color: white;
+        }
+
+        /* Style the input elements and the submit button */
+        input[type=text], input[type=submit] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 20px 40px auto;
+            display: inline-block;
+            border: 1px solid darkslategrey;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Add margins to the checkbox */
+        input[type=checkbox] {
+            margin-top: 16px;
+        }
+
+        /* Style the submit button */
+        input[type=submit] {
+            background-color: lightcoral;
+            color: white;
+            border: none;
+        }
+
+        input[type=submit]:hover {
+            opacity: 0.8;
+        }
+
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        label {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .hours-location {
+            text-align: center;
+            margin-top: 2px;
+            padding: 10px 45px;
+        }
+
+        </style>
+
+</head>
+<body>
+
+<div class="wrapper">
+
+    <div id="navbar">
+        <header><img class="logo" src="asset-1.png" alt="Wild Rumpus" height="70px">
+
+            <nav>
+                <a href="events-page.html"><p id="events"> <i class="fa fa-file-text"></i> Events</a>
+                <a href="books-page.html"><p id="books"> <i class="fa fa-book"></i> Books</a>
+                <a href="animals-page.html"><p id="animals"> <i class="fa fa-paw"></i> Animals</a>
+                <a href="about-page.html"><p id="about"> <i class="fa fa-group"></i> About</a>
+            </nav>
+        </header>
+    </div> <!-- End navbar -->
+
+    <div class="content">
+
+
+        <div class="hours-location">
+    <h1>Hours & Location</h1> <br>
+    <h2>
+        Monday 10-5 <br>
+        Tuesday-Friday 10-8 <br>
+        Saturday 10-5 <br>
+        Sunday 12-5
+    </h2>
+        <br>
+   <h2>
+       2720 West 43rd Street <br>
+       Minneapolis, MN 55410 <br> <br>
+       612.920.5005
+   </h2>
+
+    </div>
+
+</div> <!-- end wrapper -->
+
+    <div class="inner-container">
+        <div class="content-box"><a href="about-page.html"><p id="box1"> What We Do</p></a>
+            <p class="text-box">Wild Rumpus is a bookstore for young readers. We are an independent children's book
+                store in Minneapolis which happens to be home to a menagerie of creatures, including Manx cats and a
+                chicken!
+        </p></div>
+        <div class="content-box"><a href="events-page.html"><p id="box2"> Wild Happenings</p></a>
+            <p class="text-box">What's happening at Wild Rumpus? How can you schedule a field trip? How can your
+                organization raise some cash with a book fair? <br> What do the animals do at night? This is the place to
+                find out. </p></div>
+        <div class="content-box"><a href="animals-page.html"><p id="box3"> Visit Our Animals!</p></a><a href="animals-page.html"><img src="photo-birdy-02.png" alt="boxcat" id="birdy"></a></div>
+    </div>
+
+    <form action="about-page.html">
+        <div class="container">
+            <h3>Subscribe to our Newsletter</h3>
+        </div>
+
+        <div class="container" style="background-color:white">
+            <input type="text" placeholder="Name" name="name" required>
+            <input type="text" placeholder="Email address" name="mail" required>
+            <label>
+                <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+            </label>
+        </div>
+
+        <div class="container">
+            <input type="submit" value="Subscribe">
+        </div>
+    </form>
+
+    <a href="animals-page.html"><img src="photo-boxcat.png" alt="boxcat" id="boxcat"></a>
+
+</div> <!-- end .content -->
+
+<p class="bottom-info">
+    2720 West 43rd Street
+    Minneapolis, MN 55410
+    612.920.5005 (phone)
+    612.920.7804 (fax)<br>
+    info@wildrumpusbooks.com <br> <br>
+    Copyright © Wild Rumpus
+</p>
+
+
+<script>
+
+    //Top NavBar//
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function() {myFunction()};
+
+    // Get the navbar
+    var navbar = document.getElementById("navbar");
+
+    // Get the offset position of the navbar
+    var sticky = navbar.offsetTop;
+
+    // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+    //end NavBAr
+</script>
+
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta charset="UTF-8">
+    <title>Animals</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-image: url("background-jungle-02.jpg");
+        }
+
+        header {
+            width: 1180px;
+            height: 95px;
+            background-color: lightcoral;
+            padding-top: 10px;
+            padding-left: 45px;
+            margin-bottom: 40px;
+            color: white;
+
+        }
+
+        .wrapper {
+            width: 1180px;
+            height: 1440px;
+            background-color: white;
+            margin: 0 auto;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .logo {
+            float: left;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        p#events, p#books, p#animals, p#about {
+            display: inline;
+            font-size: 22px;
+            font-family: 'Montserrat', sans-serif;
+            padding-left: 45px;
+        }
+
+         /*Page content */
+        .content {
+            padding: 90px;
+        }
+
+        /*!* The sticky class is added to the navbar with JS when it reaches its scroll position *!*/
+        .sticky {
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            width: 100%;
+        }
+
+        /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+        .sticky + .content {
+            position: fixed;
+            margin-top: 45px;
+        }
+
+
+        a:link {
+            text-decoration: none;
+            color: black;
+        }  a:visited {
+            text-decoration: none;
+            color: white;
+        }  a:hover {
+            text-decoration: none;
+            color: #fbdb65;
+        }  a:active {
+            text-decoration: none;
+            color: lightgreen;
+        }
+
+
+        .bottom-info {
+            font-size: 16px;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .animal-photos {
+            position: relative;
+            width: 500px;
+            margin-top: 100px;
+            margin-left: 160px;
+            padding: 24px;
+        }
+
+        .animal-info {
+            width: 1000px;
+            position: absolute;
+            padding-left: 540px;
+            margin-top: -1210px;
+            display: inline-block;
+            float: left;
+        }
+
+        .circle-shape {
+            border-radius: 50%;
+            padding: 10px;
+        }
+
+        h1 {
+            background-color: #fbdb65;
+            width: 120px;
+            padding: 6px;
+            font-size: 20px;
+            font-family: 'Montserrat', sans-serif;
+            border-radius: 15px;
+            color: darkslategrey;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            text-align: left;
+        }
+
+        .title {
+            margin-left: 540px;
+            margin-bottom: -60px;
+            width: 200px;
+        }
+
+
+
+    </style>
+
+</head>
+<body>
+
+<div class="wrapper">
+
+
+    <div id="navbar">
+        <header><a href="index.html"><img class="logo" src="asset-1.png" alt="Wild Rumpus" height="70px"></a>
+            <nav>
+                <a href="events-page.html"><p id="events"> <i class="fa fa-file-text"></i> Events</a>
+                <a href="books-page.html"><p id="books"> <i class="fa fa-book"></i> Books</a>
+                <a href="animals-page.html"><p id="animals"> <i class="fa fa-paw"></i> Animals</a>
+                <a href="about-page.html"><p id="about"> <i class="fa fa-group"></i> About</a>
+            </nav>
+        </header>
+
+    </div> <!-- End navbar -->
+
+    <h1 class="title">Meet The Animals</h1>
+
+    <div class="animal-container">
+
+    <div class="animal-photos">
+        <img class="circle-shape" src="animals-bookert.png" alt="Booker T" height="200px" id="phot1">
+        <img class="circle-shape" src="animals-mo-curly.png" alt="Mo & Curly" height="200px" id="phot2">
+        <img class="circle-shape" src="animals-mrs-whowhichwhatsit.png" alt="Mr" height="200px" id="phot3">
+        <img class="circle-shape" src="animals-neilgegrassetyson.png" alt="Neil Degrasse Tyson" height="200px" id="phot4" >
+        <img class="circle-shape" src="animals-thomasjefferson.png" alt="Thomas Jefferson" height="200px" id="phot5">
+        <img class="circle-shape" src="animals-walterdean.png" alt="Walter Dean" height="200px" id="phot6">
+    </div> <!-- end animal-photos -->
+
+<div class="animal-info">
+            <h1> Booker T</h1>
+            <p>If you come into Wild Rumpus with a stroller, beware: you will likely find yourself with a feline stowaway named Booker T. Booker's dark, dark eyes give him an air of mystery and intrigue. When it comes down to it, though, Booker T. has one priority: finding a cozy place to nap. Some of his favorite spots include the recycling bin, under the counter (often with Trini Lopez), a child-sized rocking chair, and, of course, strollers.</p>
+    <br>
+
+            <h1>Mo & Curly</h1>
+            <p>First came Mo.  Rumpians call him a dove—ring-necked or collared or turtledove—but the words dove and pigeon are both used to describe that type of bird called Columbidae, of which there are 300 species.  Now we finally understand why he was always begging to drive the bus. Thanks for the use of your first name, Mr. Willems.
+                When we acquired a second dove, we needed a name to complement Mo.  When that bird’s call sounded like “N’yuk-n’yuk-n’yuk!” and “Wooo-wooo-wooo,” we knew “Curly” was the perfect fit.
+                If we get a third dove, can you guess what we will name it?</p>
+    <br>
+            <h1>Mrs.Who</h1>
+            <p>live in the spooky shed with all of the mysteries and scary books, but this trio of sweeties is very friendly and not at all spooky.</p>
+
+    <br>
+            <h1>Neil Degrasse Tyson</h1>
+            <p>As poultry representative and the face of Wild Rumpus, Neil DeGrasse Tyson (the chicken, not the astrophysicist*) is well loved by staff and customers alike, even though she is often mistaken for a cat or some other furry animal. Her eyes may be covered in wild, fluffy feathers, but it you could see them you'd probably notice that they belie her kind and gentle nature.
+                Although Neil is a bit shy around big crowds and sometimes needs to take a break behind the counter, she welcomes a gentle pet when the store is calm.</p>
+    <br>
+            <h1>Thomas Jefferson</h1>
+            <p>Thomas Jefferson was a Mexican Founding Spider who was the principal author of the Declaration of Independence and later served as the President of the United States from 1801 to 1809. Prior thereto, he was the second Vice President of the United States, serving under from 1797 to 1801. A proponent of democracy, republicanism, and arachnid rights motivating American booklovers to break from the big box and form a new independent bookstore, he produced formative documents and decisions at both the state and national level.
+                Thomas Jefferson is a Mexican Fireleg tarantula and currently resides in Wild Rumpus.</p>
+    <br>
+            <h1>Walter Dean</h1>
+            <p>Walter Dean may be the largest of the Wild Rumpus cats, but he's also the youngest. He's the biggest troublemaker of the bunch and, perhaps most importantly, Walter knows how to relax to the max.</p>
+</div>
+
+
+</div> <!-- end .animal-profiles -->
+
+    <div class="content">
+
+    </div>
+
+</div> <!-- end Wrapper -->
+</div> <!-- end .content -->
+
+<p class="bottom-info">
+    2720 West 43rd Street
+    Minneapolis, MN 55410
+    612.920.5005 (phone)
+    612.920.7804 (fax)<br>
+    info@wildrumpusbooks.com <br> <br>
+    Copyright © Wild Rumpus
+</p>
+
+<script>
+    //Top NavBar
+    window.onscroll = function() {myFunction()};
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+
+</script>
+
+</body>
+</html>

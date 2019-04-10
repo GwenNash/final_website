@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta charset="UTF-8">
+    <title>Events</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Page content */
+        .content {
+            padding: 50px;
+        }
+
+        .sticky {
+            z-index: 9999;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        .sticky + .content {
+            padding-top: 145px;
+        }
+
+        body {
+            background-image: url("background-jungle-02.jpg");
+        }
+
+        header {
+            width: 1180px;
+            height: 95px;
+            background-color: lightcoral;
+            padding-top: 10px;
+            padding-left: 45px;
+            color: white;
+        }
+
+        .wrapper {
+            width: 1180px;
+            height: 1000px;
+            background-color: white;
+            margin: 0 auto;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .logo {
+            float: left;
+        }
+
+        .upcoming-events {
+            background-color: #fbdb65;
+            width: 200px;
+            padding: 8px;
+            font-size: 20px;
+            border-radius: 15px;
+            color: darkslategrey;
+            margin-bottom: 15px;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 35px;
+        }
+
+        p#events, p#books, p#animals, p#about {
+            display: inline;
+            font-size: 22px;
+            font-family: 'Montserrat', sans-serif;
+            padding-left: 45px;
+        }
+
+        a:link {
+            text-decoration: none;
+            color: black;
+        }  a:visited {
+            text-decoration: none;
+            color: white;
+        } a:hover {
+            text-decoration: none;
+            color: #fbdb65;
+        }  a:active {
+            text-decoration: none;
+            color: lightgreen;
+        }
+
+
+        p {
+            font-size: 16px;
+            font-family: 'Roboto', sans-serif;
+            text-align: left;
+            color: darkslategrey;
+           }
+
+
+        /* Slideshow */
+        * {box-sizing: border-box;}
+        body {font-family: Verdana, sans-serif;}
+        .mySlides {display: none;}
+        img {vertical-align: middle; border-radius: 15px}
+
+        /* Slideshow container */
+        .slideshow-container {
+            height: 650px;
+            width: 604px;
+            padding: 28px;
+            background-color: #fbdb65;
+            border-radius: 15px;
+            margin: 10px auto 50px 0px;
+        }
+
+        /* Caption text */
+        .text {
+            color: lightcoral;
+            font-size: 20px;
+            font-family: 'Montserrat', sans-serif;
+            padding: 20px 50px;
+            position: relative;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+
+        }
+
+        @-webkit-keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+            .text {font-size: 11px}
+        }
+
+        .bottom-info {
+            font-size: 16px;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .cat {
+            position: absolute;
+            padding: 430px 0 0 410px;
+        }
+
+        /* Form element with a border around it */
+        form {
+            width: 508px;
+            border: 4px solid white;
+            border-radius: 15px;
+            margin-left: 620px;
+            margin-top: -710px;
+            position: absolute;
+        }
+
+        /* Padding and background color to containers */
+        .container {
+            width: 500px;
+            padding: 14px;
+            background-color: white;
+        }
+
+        /* Input elements and the submit button */
+        input[type=text], input[type=submit] {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 20px 40px auto;
+            display: inline-block;
+            border: 1px solid darkslategrey;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* Margins around checkbox */
+        input[type=checkbox] {
+            margin-top: 16px;
+        }
+
+        /* Submit button */
+        input[type=submit] {
+            background-color: lightcoral;
+            color: white;
+            border: none;
+        }
+
+        input[type=submit]:hover {
+            opacity: 0.8;
+        }
+
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        label {
+            font-family: 'Roboto', sans-serif;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="wrapper">
+
+    <div id="navbar">
+        <header><a href="index.html"><img class="logo" src="asset-1.png" alt="Wild Rumpus" height="70px"></a>
+            <nav>
+                <a href="events-page.html"><p id="events"><i class="fa fa-file-text"></i> Events</a>
+                <a href="books-page.html"><p id="books"><i class="fa fa-book"></i> Books</a>
+                <a href="animals-page.html"><p id="animals"><i class="fa fa-paw"></i> Animals</a>
+                <a href="about-page.html"><p id="about"><i class="fa fa-group"></i> About</a>
+            </nav>
+        </header>
+
+    </div> <!-- End navbar -->
+
+    <div class="content">
+
+
+        <a href="animals-page.html"><img class="cat" src="cat-laying.png" alt="cat"></a>
+
+        <div class="upcoming-events">Upcoming Events</div>
+
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+                <img src="event-1.png">
+                <div class="text">Andri Snær Magnason<br><br>
+                    <p>As a part of Taste of Iceland and Children's Book Week, Wild Rumpus
+                    welcomes celebrated Icelandic author Andri Snær Magnason! His newest book for young people, The
+                    Casket of Time, is a fantastical tale of time travel and environmental calamity. It is the winner of
+                    the Icelandic Literary Award and has been nominated for the Nordic Council Children's Book
+                    Award.</p>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="event-2.png">
+                <div class="text">Michael Hall<br><br>
+                <p>We are excited and honored to welcome Cow Tipping Press to Wild Rumpus! We'll have a release party
+                    for the newest Cow Tipping Press books (due out this spring), including readings from some of the
+                    talented authors featured in the new books.
+                    <br><br>
+                    This event is free, but donations for Cow Tipping Press, a non-profit organization, will be
+                    accepted. We'll have back issues for sale along with the newest books.
+                    This activity is made possible by the voters of Minnesota through a grant from the Metropolitan
+                    Regional Arts Council.</p>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="event-3.png">
+                <div class="text">Ashley Benham Yandani<br><br>
+                    <p>Wild Rumpus welcomes author and Minnesotan Rebecca K.S. Ansari! We're crazy about her debut
+                        novel, The Missing Piece of Charlie O'Reilly, a fantasy about family, love, loss, and the power
+                        of stories. We're sure you'll love it, too.
+                        <br><br>
+                        Preorder your book here! If you would like your book personally inscribed and signed by Rebecca
+                        K.S. Ansari, just indicate to whom you would like it inscribed in the customer notes when you
+                        order, or call the bookstore to place your order at 612-920-5005. If you are unable to attend
+                        the event, you will be able to pick up your book anytime after April 6th.
+                </p>
+                </div>
+
+            </div>
+        </div>
+        <br>
+
+        <form action="about-page.html">
+            <div class="container">
+                <h3>Subscribe to our Newsletter</h3>
+            </div>
+
+            <div class="container" style="background-color:white">
+                <input type="text" placeholder="Name" name="name" required>
+                <input type="text" placeholder="Email address" name="mail" required>
+                <label>
+                    <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
+                </label>
+            </div>
+
+            <div class="container">
+                <input type="submit" value="Subscribe">
+            </div>
+        </form>
+
+
+
+</div> <!-- end Wrapper -->
+</div> <!-- end .content -->
+
+<p class="bottom-info">
+    2720 West 43rd Street
+    Minneapolis, MN 55410
+    612.920.5005 (phone)
+    612.920.7804 (fax)<br>
+    info@wildrumpusbooks.com <br> <br>
+    Copyright © Wild Rumpus
+</p>
+
+<!-- Enter Javascript here -->
+
+<script>
+
+    //Slideshow//
+    var slideIndex = 0;
+    showSlides();
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 10000); // Change image every 10 seconds
+    }
+
+    //Top NavBar//
+    window.onscroll = function() {myFunction()};
+    var navbar = document.getElementById("navbar");
+    var sticky = navbar.offsetTop;
+    function myFunction() {
+        if (window.pageYOffset >= sticky) {
+            navbar.classList.add("sticky")
+        } else {
+            navbar.classList.remove("sticky");
+        }
+    }
+
+</script>
+
+</body>
+</html>
